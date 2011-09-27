@@ -1,0 +1,13 @@
+function [mean_x mean_y] = readDiemEyeMovements(diem_number)
+
+path = '/Users/pkmital/diem/data/DIEM/event_data/';
+movie_names = getDiemMovieNames(diem_number);
+movie_sizes = getDiemMovieSizes(diem_number);
+
+for i = 1 : length(movie_names)
+    [mean_x{i} mean_y{i}] = ...
+        getBinocularDistribution(path,                      ...
+                                 movie_names{i},            ...
+                                 movie_sizes{i}.width,      ...
+                                 movie_sizes{i}.height);
+end

@@ -1,0 +1,5 @@
+% runFeaturePlots('diem1')
+runFeaturePlots('diem2')
+runFeaturePlots('diem3')
+runFeaturePlots('diem4')
+runFeaturePlots('diem5')
